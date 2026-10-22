@@ -1,15 +1,20 @@
 :root {
-  color-scheme: light;
-  --ink: #19313b;
-  --muted: #4b646c;
+  --night: #142c3a;
+  --night-soft: #234453;
   --paper: #f3f6f2;
-  --surface: #ffffff;
+  --ink: #19313b;
+  --muted: #53686b;
   --accent: #bd4b31;
   --line: #c7d4ce;
+  --white: #fff;
 }
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -18,53 +23,36 @@ body {
   color: var(--ink);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.05rem;
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 .cabecera,
 main,
-.navegacion,
 footer {
-  width: min(100% - 2rem, 66rem);
+  width: min(100% - 2rem, 72rem);
   margin-inline: auto;
 }
 
 .cabecera {
-  padding-block: 3.5rem 2rem;
-}
-
-.etiqueta {
-  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--line);
   font-family: Arial, sans-serif;
-  font-size: 0.78rem;
+}
+
+.marca {
+  color: var(--ink);
   font-weight: 700;
-  text-transform: uppercase;
+  text-decoration: none;
 }
 
-h1,
-h2,
-p {
-  margin-top: 0;
-}
-
-h1 {
-  max-width: 15ch;
-  margin-bottom: 0.75rem;
-  font-size: clamp(2.4rem, 6vw, 4.5rem);
-  line-height: 1.05;
-}
-
-h2 {
-  line-height: 1.2;
-}
-
-.navegacion {
+nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 1.5rem;
-  border-block: 1px solid var(--line);
-  padding-block: 0.8rem;
-  font-family: Arial, sans-serif;
+  gap: 0.5rem 1.25rem;
 }
 
 a {
@@ -81,20 +69,36 @@ a:focus-visible {
   outline-offset: 4px;
 }
 
-.experiencia {
+.portada {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.9fr);
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.95fr);
+  gap: 2.5rem;
   align-items: center;
-  gap: 2rem;
-  padding-block: 3rem;
+  padding-block: 3.5rem;
 }
 
-.destacado {
-  max-width: 38rem;
-  border-left: 4px solid var(--accent);
-  padding: 0.75rem 1rem;
-  background: var(--surface);
+.portada-texto {
+  max-width: 34rem;
+}
+
+.sobretitulo {
+  color: var(--accent);
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
   font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 12ch;
+  margin: 0.4rem 0 1rem;
+  font-size: clamp(2.5rem, 5vw, 4.4rem);
+  line-height: 1.03;
+}
+
+h2,
+h3 {
+  line-height: 1.2;
 }
 
 figure {
@@ -105,7 +109,6 @@ img {
   display: block;
   width: 100%;
   height: auto;
-  border: 1px solid var(--line);
 }
 
 figcaption {
@@ -115,27 +118,122 @@ figcaption {
   font-size: 0.85rem;
 }
 
-.bloque {
+.boton {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.7rem 1rem;
+  background: var(--night);
+  color: var(--white);
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+}
+
+.boton:hover {
+  background: var(--night-soft);
+  color: var(--white);
+}
+
+.seccion {
   border-top: 1px solid var(--line);
-  padding-block: 2rem;
+  padding-block: 2.5rem;
+}
+
+.titulo-seccion {
+  max-width: 35rem;
+}
+
+.ruta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+article {
+  min-width: 0;
+  border-top: 4px solid var(--night-soft);
+  padding: 1rem 1rem 1.25rem;
+  background: var(--white);
+}
+
+.numero {
+  color: var(--accent);
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+article h3 {
+  margin-bottom: 0.5rem;
+}
+
+article p {
+  margin-bottom: 0;
+}
+
+.preparacion,
+.recursos {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.preparacion ul {
+  margin-top: 0;
+  padding-left: 1.25rem;
 }
 
 .recursos {
-  background: var(--surface);
+  background: #e4ece7;
   padding-inline: 1.25rem;
 }
 
+.recursos p {
+  margin: 0;
+}
+
 footer {
-  margin-top: 1rem;
-  border-top: 1px solid var(--line);
-  padding-block: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1.5rem 2rem;
   color: var(--muted);
   font-family: Arial, sans-serif;
   font-size: 0.9rem;
 }
 
+footer p {
+  margin: 0;
+}
+
 @media (max-width: 700px) {
-  .experiencia {
+  .cabecera {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .portada,
+  .preparacion,
+  .recursos {
     grid-template-columns: 1fr;
+  }
+
+  .portada {
+    gap: 1.5rem;
+  }
+
+  .ruta {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
