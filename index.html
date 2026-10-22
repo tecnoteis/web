@@ -3,63 +3,91 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Unha recomendación: observar o ceo</title>
+  <meta name="description" content="Unha guía para planificar unha primeira observación astronómica desde Galicia.">
+  <title>Noite clara | Guía de observación</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="cabecera">
-    <p class="etiqueta">Unha actividade para mirar cara arriba</p>
-    <h1>Observar o ceo nocturno</h1>
-    <p>Unha noite despexada pode converterse nunha pequena aventura científica.</p>
+  <header class="cabecera" id="arriba">
+    <a class="marca" href="#arriba">Noite clara</a>
+    <nav aria-label="Navegación principal">
+      <a href="#plan">Planifica</a>
+      <a href="#observa">Que observar</a>
+      <a href="#recursos">Recursos</a>
+    </nav>
   </header>
 
-  <nav class="navegacion" aria-label="Navegación principal">
-    <a href="#experiencia">A experiencia</a>
-    <a href="#motivos">Por que probar</a>
-    <a href="#recursos">Recursos</a>
-  </nav>
-
   <main>
-    <section class="experiencia" id="experiencia">
-      <div>
-        <p class="etiqueta">Sen equipamento especial</p>
-        <h2>Un primeiro paso cara á astronomía</h2>
+    <section class="portada" id="plan">
+      <div class="portada-texto">
+        <p class="sobretitulo">Guía breve de observación</p>
+        <h1>Unha noite baixo as estrelas.</h1>
         <p>
-          Escolle un lugar seguro, afastado de luces intensas, e deixa que os
-          ollos se afagan á escuridade. Podes comezar pola Lúa e buscar despois
-          algunhas estrelas brillantes. Un mapa celeste axuda, pero observar con
-          calma é o máis importante.
+          Organiza unha primeira saída para mirar o ceo. Non necesitas un
+          telescopio: escolle unha noite, un lugar seguro e un obxecto que che
+          dea curiosidade.
         </p>
-        <p class="destacado">A mellor ferramenta para empezar é a curiosidade.</p>
+        <a class="boton" href="#observa">Preparar a saída</a>
       </div>
       <figure>
-        <img src="imaxes/ceo-nocturno.svg" alt="Ilustración orixinal dunha lúa crecente sobre montañas baixo un ceo estrelado" width="960" height="560">
-        <figcaption>Ilustración propia creada para esta práctica.</figcaption>
+        <img src="imaxes/ceo-nocturno.svg" alt="Lúa crecente e estrelas sobre montañas nunha noite despexada" width="960" height="560">
+        <figcaption>Ilustración orixinal para este proxecto escolar.</figcaption>
       </figure>
     </section>
 
-    <section class="bloque" id="motivos">
-      <h2>Tres motivos para saír observar</h2>
-      <ol>
-        <li>Relacionas o que estudas na aula co ceo real.</li>
-        <li>Aprendes a describir posicións, patróns e cambios.</li>
-        <li>É unha actividade gratuíta que se pode repetir en calquera estación.</li>
-      </ol>
+    <section class="seccion" id="observa">
+      <div class="titulo-seccion">
+        <p class="sobretitulo">Unha ruta sinxela</p>
+        <h2>Comeza polo que xa podes ver</h2>
+      </div>
+      <div class="ruta">
+        <article>
+          <span class="numero" aria-hidden="true">01</span>
+          <h3>Busca a Lúa</h3>
+          <p>Identifica a súa forma e posición. Nas noites seguintes, observa como cambia.</p>
+        </article>
+        <article>
+          <span class="numero" aria-hidden="true">02</span>
+          <h3>Adáptate á escuridade</h3>
+          <p>Agarda uns minutos nun lugar seguro e evita mirar directamente a luces intensas.</p>
+        </article>
+        <article>
+          <span class="numero" aria-hidden="true">03</span>
+          <h3>Compara o que ves</h3>
+          <p>Anota as estrelas visibles e proba a repetir a observación desde outro lugar.</p>
+        </article>
+      </div>
     </section>
 
-    <section class="bloque recursos" id="recursos">
-      <h2>Prepara a observación</h2>
+    <section class="seccion preparacion">
+      <div>
+        <p class="sobretitulo">Antes de saír</p>
+        <h2>Un pouco de preparación mellora a experiencia.</h2>
+      </div>
+      <ul>
+        <li>Consulta a previsión meteorolóxica e a fase da Lúa.</li>
+        <li>Escolle un espazo público e seguro, e avisa a unha persoa adulta.</li>
+        <li>Leva roupa axeitada e unha lanterna de luz suave.</li>
+      </ul>
+    </section>
+
+    <section class="seccion recursos" id="recursos">
+      <div>
+        <p class="sobretitulo">Para continuar</p>
+        <h2>Consulta fontes fiables</h2>
+      </div>
       <p>
-        Consulta <a href="https://stellarium-web.org/">Stellarium Web</a> para
-        identificar obxectos visibles e visita a
+        Usa <a href="https://stellarium-web.org/">Stellarium Web</a> para
+        preparar o mapa do ceo e a
         <a href="https://science.nasa.gov/solar-system/">guía do Sistema Solar da NASA</a>
-        para ampliar información.
+        para coñecer os planetas e outros corpos celestes.
       </p>
     </section>
   </main>
 
   <footer>
-    <p>Traballo escolar de exemplo. Texto e ilustración propios.</p>
+    <p>Proxecto escolar de exemplo. Contido e ilustración propios; ligazóns externas indicadas nas fontes.</p>
+    <a href="#arriba">Volver ao inicio</a>
   </footer>
 </body>
 </html>
