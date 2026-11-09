@@ -82,7 +82,7 @@ a:focus-visible {
 }
 
 .sobretitulo {
-  color: var(--accent);
+  color: var(--muted);
   font-family: Arial, sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
