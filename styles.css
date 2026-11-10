@@ -19,7 +19,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--muted);
   color: var(--ink);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.05rem;
